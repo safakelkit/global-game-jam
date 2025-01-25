@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://3mq07yse5dq4"]
+
+[sub_resource type="GDScript" id="GDScript_rocvm"]
+script/source = "extends Node3D
+
+@export var speed = 30
+
+const KILL_TIME = 2
+var timer = 0
+
+func _physics_process(delta):
+	var forward_direction = global_transform.basis.z.normalized()
+	global_translate(forward_direction * speed * delta)
+
+	timer += delta
+	if timer >= KILL_TIME:
+		queue_free()
+"
+
+[sub_resource type="SphereMesh" id="SphereMesh_1fbjn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_leque"]
+
+[node name="Bullet2" type="Node3D"]
+script = SubResource("GDScript_rocvm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, 0)
+mesh = SubResource("SphereMesh_1fbjn")
+surface_material_override/0 = SubResource("StandardMaterial3D_leque")

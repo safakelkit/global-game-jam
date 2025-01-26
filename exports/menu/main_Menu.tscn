@@ -1,0 +1,146 @@
+[gd_scene load_steps=11 format=3 uid="uid://bl1x2spiegsge"]
+
+[ext_resource type="Texture2D" uid="uid://dwmlhqroin55l" path="res://WhatsApp Image 2025-01-24 at 23.14.26.jpeg" id="1_4cskh"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_hqcbc"]
+[ext_resource type="Script" path="res://panel.gd" id="3_bru1t"]
+[ext_resource type="FontFile" uid="uid://bqius3npga2yw" path="res://Bubblez-Regular.otf" id="3_fx136"]
+[ext_resource type="Script" path="res://label.gd" id="4_wrd4d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u15cw"]
+texture = ExtResource("1_4cskh")
+modulate_color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwoo6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6djjk"]
+bg_color = Color(0.601223, 0.601223, 0.601223, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5a1a"]
+bg_color = Color(0.674815, 0.674815, 0.674815, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uer1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hqcbc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_u15cw")
+script = ExtResource("3_bru1t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -68.0
+offset_right = 145.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+text = "Start Game
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+text = "After Credits"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -172.0
+offset_right = 79.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -12
+theme_override_fonts/font = ExtResource("3_fx136")
+theme_override_font_sizes/font_size = 61
+text = "BUBBLE TURK"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_wrd4d")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="Panel" method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_after_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="Panel" method="_on_quit_pressed"]

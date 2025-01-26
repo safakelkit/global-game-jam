@@ -1,0 +1,259 @@
+[gd_scene load_steps=16 format=3 uid="uid://c5bp5jmrsmifl"]
+
+[ext_resource type="Script" path="res://credit_screen.gd" id="1_7vi82"]
+[ext_resource type="Texture2D" uid="uid://dwmlhqroin55l" path="res://WhatsApp Image 2025-01-24 at 23.14.26.jpeg" id="1_80q4e"]
+[ext_resource type="Script" path="res://panel.gd" id="2_6rkfp"]
+[ext_resource type="Script" path="res://button.gd" id="3_4mnx2"]
+[ext_resource type="FontFile" uid="uid://bqius3npga2yw" path="res://Bubblez-Regular.otf" id="3_d2ghp"]
+[ext_resource type="Script" path="res://label.gd" id="4_pblp3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u15cw"]
+texture = ExtResource("1_80q4e")
+modulate_color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwoo6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6djjk"]
+bg_color = Color(0.601223, 0.601223, 0.601223, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5a1a"]
+bg_color = Color(0.674815, 0.674815, 0.674815, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uer1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnu12"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bmha"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oon5k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7h2l"]
+
+[node name="CreditScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vi82")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_u15cw")
+script = ExtResource("2_6rkfp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -182.0
+offset_right = 331.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Nazmi BOZA - Game Developer"
+script = ExtResource("3_4mnx2")
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Berat ÖZTÜRK-  Game Developer"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Safa KELKİT - Game Developer"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Eyüp ECE - Game Developer"
+
+[node name="Button6" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Emre BOZKURT - 3D Designer"
+
+[node name="Button7" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Rana BELVERENLİ - Sound and Music Designer"
+
+[node name="Button8" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Esra Tosun - Content/Story Editor"
+
+[node name="Button9" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gwoo6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6djjk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b5a1a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5uer1")
+button_mask = 0
+text = "Abdurrahman Karabacak - Tester"
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dnu12")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0bmha")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oon5k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d7h2l")
+text = "BACK"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -279.0
+offset_right = 221.0
+offset_bottom = -182.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -12
+theme_override_fonts/font = ExtResource("3_d2ghp")
+theme_override_font_sizes/font_size = 61
+text = "AFTER CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_pblp3")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="Panel" method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="Panel" method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="Panel" method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button5" to="Panel" method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button6" to="Panel" method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button7" to="Panel" method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button8" to="Panel" method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button9" to="Panel" method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

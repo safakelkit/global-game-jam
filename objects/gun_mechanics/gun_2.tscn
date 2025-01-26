@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cesseav6j46v"]
+
+[ext_resource type="Script" path="res://scripts/gun_scripts/gun.gd" id="1_cbdnq"]
+[ext_resource type="PackedScene" uid="uid://3mq07yse5dq4" path="res://objects/gun_mechanics/bullet_2.tscn" id="2_trd5a"]
+[ext_resource type="PackedScene" uid="uid://cpfubrxdo6e83" path="res://models/Scifi Smg.glb" id="3_v8csd"]
+
+[node name="gun2" type="Node3D"]
+script = ExtResource("1_cbdnq")
+Bullet = ExtResource("2_trd5a")
+millis_between_shots1 = 0.1
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(0.999391, 0, 0.0348995, 0, 1, 0, -0.0348995, 0, 0.999391, 7.66572e-06, 7.45058e-09, 0.00174969)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Root Scene" parent="." instance=ExtResource("3_v8csd")]
+transform = Transform3D(3.08237e-05, 7.79066e-06, -0.0049999, -8.70476e-05, 0.00499924, 7.25299e-06, 0.00499915, 8.70011e-05, 3.09545e-05, 0, 0, 0)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
